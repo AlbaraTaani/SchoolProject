@@ -1,0 +1,40 @@
+﻿@model List<Teacher>
+
+<link href="css\FormDesign.css" rel="stylesheet">
+<div>
+	<form action="Create" method="post">
+		<div class="row">
+			<div class="col-25">
+				<label for="CourseName">Course Name</label>
+			</div>
+			<div class="col-75">
+				<input type="text" id="CourseName" name="CourseName" placeholder="Course name.." maxlength="10">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="TeacherId">Seelct Teacher</label>
+			</div>
+			<div class="col-75">
+				<select id="TeacherID" name="TeacherId">
+					@foreach (Teacher teacher in Model)
+					{
+						<option value="@teacher.TeacherId">@teacher.TeacherName</option>
+					}
+
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="CourseCapacity">Course Capacity</label>
+			</div>
+			<div class="col-75">
+				<input type="number" id="CourseCapacity" name="CourseCapacity" placeholder="Course Capacity.." max="25" min="0">
+			</div>
+		</div>
+		<div class="row">
+			<input type="submit" value="Save">
+		</div>
+	</form>
+</div>

@@ -1,0 +1,43 @@
+﻿
+<link href="css\FormDesign.css" rel="stylesheet">
+<div>
+	<form action="Create" method="post" enctype="multipart/form-data">
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">Student Name</label>
+			</div>
+			<div class="col-75">
+				<!-- Note: The name attribute should match the variable name on the model class-->
+				<input type="text" id="StudentName" name="StudentName" placeholder="Your name..">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="lname">Age</label>
+			</div>
+			<div class="col-75">
+				<!-- Note: The name attribute should match the variable name on the model class-->
+				<input type="text" id="StudentAge" name="StudentAge" placeholder="Your Age..">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="lname">Is Active</label>
+			</div>
+			<div class="col-75">
+				<!-- Note: The name attribute should match the variable name on the model class-->
+				<input type="checkbox" id="IsActive" name="IsActive" />
+			</div>
+		</div>
+		<div class="col-25">
+			<label for="lname">Student Photo</label>
+		</div>
+		<div class="col-75">
+			<!-- Note: The name attribute should match the variable name on the model class-->
+			<input type="file" name="StudentPhoto" />
+		</div>
+		<div class="row">
+			<input type="submit" value="Save">
+		</div>
+	</form>
+</div>
